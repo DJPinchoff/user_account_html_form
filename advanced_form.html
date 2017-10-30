@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>Advanced Form Practice</title>
+  <link rel="stylesheet" href="whitespace-reset.css"/>
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font: normal 16px Helvetica, Arial, sans-serif;
+  }
+  form {
+    max-width: 648px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+  h1 {
+    font-weight: normal;
+    font-size: 28px;
+    padding-bottom: 22px;
+  }
+
+  fieldset {
+    border: none;
+    border-left: 4px solid #cdcccb;
+    background: #ececec;
+    padding: 24px 32px;
+    margin-top: 2px;
+  }
+  h2 {
+    font: bold 20px Helvetica, Arial, sans-serif;
+    padding-bottom: 19px;
+  }
+
+  label {
+    font-weight: bold;
+    font-size: 18;
+    color: #676767;
+  }
+
+  dt {
+    padding-bottom: 10px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #2e67b2;
+    font: normal .875rem Helvetica, Arial, sans-serif;
+    padding: 0 8px;
+    color: #282828;
+    width: 100%;
+
+  }
+
+  .partial {
+    display: inline-block;
+  }
+  dd {
+    margin-bottom: 24px;
+  }
+
+  .third {
+    width: 33.3%;
+    padding-right: 20px;
+  }
+
+  .last {
+    padding-right: 0;
+  }
+
+  .half {
+    width: 50%;
+  }
+
+  .gap {
+    padding-right: 20px;
+  }
+
+  .first_name {
+    padding-right: 10.5px;
+  }
+
+  textarea {
+    margin: 0 auto 24px auto;
+    width: 100%;
+    border: 1px solid #2e67b2;
+    border-radius: 4px;
+  }
+
+  .horizontal dd, .horizontal dt {
+    display: inline-block;
+  }
+
+  .horizontal dt {
+    width: 4%;
+    vertical-align: top;
+  }
+
+  .horizontal dd {
+    width: 95%;
+  }
+
+  .agreement {
+    font-weight: normal;
+    font-size: 14px;
+  }
+  button {
+    background: #0066cc;
+    color: #fff;
+    font: normal 16px Helvetica, Arial, sans-serif;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 4px;
+  }
+  </style>
+</head>
+<body>
+  <form action="" method="post">
+    <h1>Create Your Profile</h1>
+    <fieldset>
+      <h2>Personal Info</h2>
+      <dl class="first_name partial half">
+        <dt>
+          <label for="first_name">Your Name</label>
+        </dt>
+        <dd>
+          <input name="first_name" id="first_name" type="text" placeholder="First"/>
+        </dd>
+      </dl><!--
+      --><dl class="partial half last">
+        <dd>
+          <input name="last_name" id="last_name" type="text" placeholder="Last"/>
+        </dd>
+      </dl>
+      <dl>
+        <dt>
+          <label for="email">Email</label>
+        </dt>
+        <dd>
+          <input class="text_box" id="email" type="email"/>
+        </dd>
+      </dl>
+    </fieldset>
+    <fieldset>
+      <h2>Social Media Accounts</h2>
+      <dl id="password_dl" class="partial third">
+        <dt><label for="facebook">Facebook</label></dt>
+        <dd>
+          <input class="social" id="facebook" type="text">
+        </dd>
+      </dl><!--
+      --><dl class="partial third">
+        <dt>
+          <label for="twitter">Twitter</label>
+        </dt>
+        <dd>
+          <input class="social" id="twitter" type="text">
+        </dd>
+      </dl><!--
+      --><dl class="partial third last">
+        <dt>
+          <label for="linkedin">Linkedin</label>
+        </dt>
+        <dd>
+          <input class="social" id="linkedin" type="text">
+        </dd>
+      </dl>
+    </fieldset>
+    <fieldset>
+      <h2>Account Info</h2>
+      <dl>
+        <dt><label for="profile_name">Profile Name</label></dt>
+        <dd><input type="text" id="profile_name"/></dd>
+      </dl>
+      <dl class="gap partial half">
+        <dt><label for="password">Password</label></dt>
+        <dd><input type="password" id="password"></dd>
+      </dl><!--
+      --><dl class="last partial half">
+        <dt><label for="confirm_pass">Confirm Password</label></dt>
+        <dd><input type="password" id="confirm_pass"></dd>
+      </dl>
+    </fieldset>
+    <fieldset>
+      <h2>Bio</h2>
+      <textarea rows="8"></textarea>
+    </fieldset>
+    <fieldset>
+      <dl class="horizontal">
+        <dt><input type="checkbox" id="agreement" name="agreement"/></dt>
+        <dd><label class="agreement" for="agreement"> I agree to treat other users with respect, and will not say anything at all if I have nothing nice to say. </label></dd>
+      </dl>
+      <button>Create Account</button>
+    </fieldset>
+  </form>
+</body>
+</html>
