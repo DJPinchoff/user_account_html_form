@@ -81,8 +81,8 @@
     padding-right: 20px;
   }
 
-  .first_name {
-    padding-right: 10.5px;
+  .last_name {
+    padding-left: 10.5px;
   }
 
   textarea {
@@ -92,30 +92,19 @@
     border-radius: 4px;
   }
 
-  .horizontal dd, .horizontal dt {
-    display: inline-block;
-  }
-
-  .horizontal dt {
-    width: 4%;
-    vertical-align: top;
-  }
-
-  .horizontal dd {
-    width: 95%;
-  }
-
-  .agreement {
+  label.agree {
     font-weight: normal;
     font-size: 14px;
   }
   button {
     background: #0066cc;
+    display: block;
     color: #fff;
     font: normal 16px Helvetica, Arial, sans-serif;
     padding: 14px 32px;
     border: none;
     border-radius: 4px;
+    margin-top: 24px;
   }
 
   button:focus, button:hover {
@@ -136,7 +125,7 @@
           <input name="first_name" id="first_name" type="text" placeholder="First"/>
         </dd>
       </dl><!--
-      --><dl class="partial half last">
+      --><dl class="last_name partial half last">
         <dt></dt>
         <dd>
           <input name="last_name" id="last_name" type="text" placeholder="Last"/>
@@ -196,10 +185,10 @@
       <textarea rows="8"></textarea>
     </fieldset>
     <fieldset>
-      <dl class="horizontal">
-        <dt><input type="checkbox" id="agreement" name="agreement"/></dt>
-        <dd><label class="agreement" for="agreement"> I agree to treat other users with respect, and will not say anything at all if I have nothing nice to say. </label></dd>
-      </dl>
+      <label class="agree">
+        <input type="checkbox" name="agree" value="agree">
+                I agree to treat other users with respect, and will not say anything at all if I have nothing nice to say.
+      </label>
       <button>Create Account</button>
     </fieldset>
   </form>
